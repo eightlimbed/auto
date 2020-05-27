@@ -1,20 +1,28 @@
-# AutoAPI
-AutoAPI is a simple 
+# auto_api
+auto_api is a simple "Hello, World" HTTP server that returns HTML or JSON depending on the `Accept` header value.
 
-### Install
+# Requirements
+**This program requires [Docker](https://docs.docker.com/get-docker/) and [Make](https://www.gnu.org/software/make/)**. Make is only used for convenience. If you don't have Make, or cannot install it, please see _Running without Make_ at the bottom of this page.
 
-```
-make install
-```
+# Quickstart
+```bash
+# Build the Docker image
+$ make build
 
-### Start
+# Run the API in a container (must have port 5000 available)
+$ make run
 
-```
-make start_server
+# Test the endpoint
+$ make smoke_tests
 ```
 
 ### Run Tests
 
 ```
 make run_tests
+```
+
+### Running without Make
+
+```
 ```
