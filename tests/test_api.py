@@ -9,7 +9,7 @@ API_URI = 'http://127.0.0.1:5000/'
 
 
 @responses.activate
-def test_route_handles_get_and_post_methods(mocker):
+def test_route_handles_get_and_post_methods():
     """
     Tests that the '/' endpoint handles GET and POST requests.
     The endpoint will also handle HEAD and OPTIONS methods, but all

@@ -23,7 +23,7 @@ def hello_world():
     """
     if os.environ.get('DEBUG'):
         timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        logger.debug(f'{timestamp} - {request.url}')
+        logger.debug(f'[DEBUG] {timestamp} - {request.url}')
 
     if request.headers.get('Accept') == 'application/json':
         return {'message': 'Hello, World'}
@@ -31,4 +31,4 @@ def hello_world():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=5000)
